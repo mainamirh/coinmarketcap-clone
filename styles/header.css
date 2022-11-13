@@ -1,0 +1,168 @@
+.header {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  background-color: rgb(23, 25, 36);
+  font-weight: 600;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.coinmarketcap-logo {
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .right-section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 15px;
+}
+
+.right-section .connect-wallet {
+  background-color: rgb(56, 97, 251);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 13px;
+  margin: 0 15px;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.right-section .connect-wallet:hover {
+  background-color: rgba(56, 98, 251, 0.9);
+}
+
+.right-section .connect-wallet:active {
+  background-color: rgba(56, 98, 251, 0.7);
+}
+
+.right-section .search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  background-color: #222531;
+  padding: 9px 13px;
+}
+
+.right-section .search-bar input {
+  background-color: #222531;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.right-section .search-bar input:focus {
+  color: white;
+}
+
+.right-section .search-bar input::placeholder {
+  font-size: 14px;
+  color: #646b80;
+}
+
+.connect-modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.shown-address {
+  display: flex;
+  align-self: center;
+  margin-right: 15px;
+  margin-left: 8px;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: rgba(50, 53, 70, 0.9);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.shown-address:hover {
+  opacity: 0.85;
+}
+
+.modal-content {
+  background-color: #171924;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content .metamask {
+  margin-bottom: 15px;
+}
+
+.modal-content .metamask,
+.modal-content .walletConnect {
+  background-color: #222531;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.modal-content .metamask:hover,
+.modal-content .walletConnect:hover {
+  background-color: rgba(34, 37, 49, 0.9);
+}
+
+.modal-content .metamask:active,
+.modal-content .walletConnect:active {
+  background-color: rgba(34, 37, 49, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.close-modal {
+  font-size: 28px;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,104 @@
+.info-container {
+  display: flex;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dce0e9;
+  max-width: 1500px;
+  height: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statistic {
+  display: flex;
+  flex: 2.5;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.chat {
+  flex: 1;
+}
+
+.tab-container,
+.tab-1,
+.tab-2,
+.filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-1,
+.tab-2 {
+  align-items: center;
+  padding: 4px 4px;
+  border-radius: 7px;
+  background-color: #323546;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tabItem {
+  cursor: pointer;
+  padding: 5px 8px;
+  background-color: #323546;
+}
+
+.tabActive {
+  background-color: #171924;
+  border-radius: 7px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  font-size: 13px;
+}
+
+.coin-to-usd,
+.coin-to-btc {
+  display: flex;
+  align-items: center;
+}
+
+.converter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.convert-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #323546;
+  border-radius: 10px;
+}
+
+.convert-details .left {
+  display: flex;
+  align-items: center;
+}
+
+.convert-details .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+}
+
+.convert-button {
+  background-color: #3773f5;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: max-content;
+  cursor: pointer;
+}

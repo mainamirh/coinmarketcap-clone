@@ -1,0 +1,24 @@
+.trending {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 40px;
+}
+
+.trending .title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.trending .description {
+  color: rgb(161, 167, 187);
+  font-size: 15px;
+}
+
+.trending .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  height: 200px;
+}

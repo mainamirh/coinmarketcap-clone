@@ -1,0 +1,38 @@
+.table-container {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  padding: 0 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-left: none;
+  border-right: none;
+  text-align: end;
+}
+
+thead tr {
+  height: 47px;
+}
+
+th {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+tr {
+  height: 80px;
+}
+
+td {
+  font-size: 14px;
+  font-weight: 600;
+}
