@@ -25,12 +25,6 @@ const Header = ({ user }) => {
     setCurrentUser(user);
   }, [user]);
 
-  // If current user changed then sign out.
-  useEffect(() => {
-    if (!currentUser) return;
-    if (address && currentUser.address != address) signOut();
-  }, [address]);
-
   useEffect(() => {
     window.onclick = function (event) {
       if (event.target == modal.current) {
@@ -81,8 +75,6 @@ const Header = ({ user }) => {
         "content-type": "application/json",
       },
     });
-    // Don't show the sign message page if user has the session.
-    if (currentUser.address == address) return;
 
     const message = data.message;
 

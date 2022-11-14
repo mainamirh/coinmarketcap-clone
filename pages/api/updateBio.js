@@ -1,7 +1,7 @@
 import connectDB from "../../lib/connectDB";
 import Users from "../../lib/userSchema";
 
-export default async (req, res) => {
+const updateBio = async (req, res) => {
   const { profileId, bio } = req.body;
 
   await connectDB();
@@ -14,3 +14,5 @@ export default async (req, res) => {
     console.log(error);
   }
 };
+
+export default updateBio;
