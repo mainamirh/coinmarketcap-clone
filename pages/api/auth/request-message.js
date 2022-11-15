@@ -3,7 +3,7 @@ import Moralis from "moralis";
 const config = {
   domain: process.env.APP_DOMAIN,
   statement: "Please sign this message to confirm your identity.",
-  uri: process.env.NEXT_PUBLIC_VERCEL_URL,
+  uri: process.env.NEXT_PUBLIC_NEXTAUTH_URL,
   timeout: 60,
 };
 
