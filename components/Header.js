@@ -42,7 +42,8 @@ const Header = ({ user }) => {
   };
 
   const handleAuth = async (tag = "") => {
-    console.log("vercel url: ", process.env.NEXT_PUBLIC_VERCEL_URL);
+    console.log("next auth url: ", process.env.NEXTAUTH_URL);
+    console.log("vercel not exposed url: ", process.env.VERCEL_URL);
     if (isConnected) {
       await disconnectAsync();
     }
