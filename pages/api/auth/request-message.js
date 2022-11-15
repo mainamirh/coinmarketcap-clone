@@ -1,16 +1,16 @@
 import Moralis from "moralis";
 
 const config = {
-  domain: process.env.NEXT_PUBLIC_APP_DOMAIN,
+  domain: process.env.APP_DOMAIN,
   statement: "Please sign this message to confirm your identity.",
-  uri: process.env.NEXT_PUBLIC_NEXTAUTH_URL,
+  uri: process.env.NEXTAUTH_URL,
   timeout: 60,
 };
 
 export default async function handler(req, res) {
   const { address, chain, network } = req.body;
 
-  await Moralis.start({ apiKey: process.env.NEXT_PUBLIC_MORALIS_API_KEY });
+  await Moralis.start({ apiKey: process.env.MORALIS_API_KEY });
 
   try {
     const message = await Moralis.Auth.requestMessage({

@@ -25,7 +25,7 @@ export default NextAuth({
           const { message, signature } = credentials;
 
           await Moralis.start({
-            apiKey: process.env.NEXT_PUBLIC_MORALIS_API_KEY,
+            apiKey: process.env.MORALIS_API_KEY,
           });
 
           const { address, profileId, expirationTime } = (
