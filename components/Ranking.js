@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, useCallback } from "react";
+import { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import topTenFake from "./topTenFake.json";
 import Rate from "./Rate";
@@ -82,7 +82,12 @@ const Ranking = () => {
           <tr>
             <th style={{ textAlign: "center" }}>&nbsp;</th>
             <th style={{ textAlign: "center", paddingRight: "16px" }}>&#35;</th>
-            <th style={{ textAlign: "start" }}>Name</th>
+            <th style={{ textAlign: "start" }}>
+              Name
+              <span style={{ color: "rgb(56, 97, 251)", marginLeft: "10px" }}>
+                &#40;Click on coin name to see info&#41;
+              </span>
+            </th>
             <th>Price</th>
             <th>1h &#37;</th>
             <th>24h &#37;</th>
@@ -174,22 +179,7 @@ const Ranking = () => {
                         </span>
                       </Link>
                     </td>
-                    <td>
-                      <Link
-                        href={{
-                          pathname: "currencies/Price",
-                          query: {
-                            symbol: coin.symbol,
-                            coin: coin.name,
-                            price: roundNumber(coin.quote.USD.price),
-                          },
-                        }}
-                        target="_blank"
-                        style={{ cursor: "pointer", display: "inline-flex" }}
-                      >
-                        &#36;{roundNumber(coin.quote.USD.price)}
-                      </Link>
-                    </td>
+                    <td>&#36;{roundNumber(coin.quote.USD.price)}</td>
                     <td>
                       <Rate
                         rate={roundNumber(coin.quote.USD.percent_change_1h)}

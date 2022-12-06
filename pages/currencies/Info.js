@@ -16,12 +16,14 @@ import cardano from "../../assets/cardano.png";
 import solana from "../../assets/solana.png";
 import doge from "../../assets/shiba.png";
 
+import { getSession } from "next-auth/react";
+
 const coinIcons = [btc, eth, usdt, usdc, bnb, xrp, busd, cardano, solana, doge];
 
 import converter from "../../assets/converter.png";
 import Usd from "../../assets/svg/usd";
 
-const Info = () => {
+const Info = ({ user }) => {
   const [coinInfo, setCoinInfo] = useState({
     symbol: "",
     coin: "",
@@ -47,7 +49,7 @@ const Info = () => {
 
   return (
     <div>
-      <Header />
+      <Header user={user} />
       <div
         style={{
           background: "linear-gradient(to bottom, #212430, #17171a)",
@@ -143,5 +145,15 @@ const Info = () => {
     </div>
   );
 };
+
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  const user = session ? session.user : null;
+
+  return {
+    props: { user: user },
+  };
+}
 
 export default Info;

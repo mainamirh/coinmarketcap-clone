@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Trending from "../components/Trending";
 import Ranking from "../components/Ranking";
+import Footer from "../components/Footer";
 
 import { getSession } from "next-auth/react";
 
@@ -26,7 +27,9 @@ const Home = ({ user }) => {
         <Ranking />
       </main>
 
-      <footer className=""></footer>
+      <footer className="">
+        <Footer />
+      </footer>
     </div>
   );
 };

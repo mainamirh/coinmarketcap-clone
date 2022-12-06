@@ -4,7 +4,11 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    domains: ["s3.coinmarketcap.com", "img-cdn.magiceden.dev"],
+    domains: [
+      "s3.coinmarketcap.com",
+      "img-cdn.magiceden.dev",
+      "s2.coinmarketcap.com",
+    ],
   },
 };
 

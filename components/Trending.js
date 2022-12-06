@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import TrendingCard from "./TrendingCard";
 import Rate from "./Rate";
 import SwitchButton from "./SwitchButton";
@@ -32,6 +32,8 @@ const coins = [
 ];
 
 const Trending = () => {
+  const [showTrending, setShowTrending] = useState(true);
+
   return (
     <div className="trending">
       <div
@@ -43,22 +45,31 @@ const Trending = () => {
         }}
       >
         <div className="title">Todays Cryptocurrency Prices by Market Cap</div>
-        <SwitchButton />
+        <SwitchButton
+          checked={showTrending}
+          setChecked={() => setShowTrending(!showTrending)}
+        />
       </div>
       <div className="description">
         The global crypto market cap is $919.95B, a&nbsp;
         <Rate rate={"1.89"} /> decrease over the last day.
       </div>
 
-      <div className="content">
-        <TrendingCard coins={coins} title="Trending" titleIcon={fire} />
-        <TrendingCard
-          coins={coins}
-          title="Biggest Gainers"
-          titleIcon={gainers}
-        />
-        <TrendingCard coins={coins} title="Recently Added" titleIcon={recent} />
-      </div>
+      {showTrending && (
+        <div className="content">
+          <TrendingCard coins={coins} title="Trending" titleIcon={fire} />
+          <TrendingCard
+            coins={coins}
+            title="Biggest Gainers"
+            titleIcon={gainers}
+          />
+          <TrendingCard
+            coins={coins}
+            title="Recently Added"
+            titleIcon={recent}
+          />
+        </div>
+      )}
     </div>
   );
 };

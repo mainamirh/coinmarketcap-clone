@@ -14,7 +14,7 @@ const Header = ({ user }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const { connectAsync } = useConnect();
   const { disconnectAsync } = useDisconnect();
-  const { isConnected, address } = useAccount();
+  const { isConnected } = useAccount();
   const { signMessageAsync } = useSignMessage();
   const router = useRouter();
 

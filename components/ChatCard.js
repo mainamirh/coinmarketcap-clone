@@ -5,13 +5,12 @@ import Heart from "../assets/svg/heart";
 import MoreHorizontal from "../assets/svg/moreHorizontal";
 import Share from "../assets/svg/share";
 import shiba from "../assets/shiba.png";
-import diamond from "../assets/diamond.png";
 import ChevronUp from "../assets/svg/chevronUp";
 import ChevronDown from "../assets/svg/chevronDown";
 
 const ChatCard = ({
-  name = "Amir",
-  username = "mainamirh",
+  name = "Full Name",
+  username = "username",
   bullish = true,
 }) => {
   return (
@@ -82,7 +81,10 @@ const ChatCard = ({
           </div>
         </div>
       </div>
-      <div className="message">shogdohidhpdohdfphgdfohoh </div>
+      <div className="message">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
+        nemo!
+      </div>
       <div className="chat-footer">
         <div>
           <Comment />

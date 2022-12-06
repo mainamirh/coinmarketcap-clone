@@ -8,6 +8,7 @@ import "../styles/info.css";
 import "../styles/chat.css";
 import "../styles/chat-card.css";
 import "../styles/price.css";
+import "../styles/footer.css";
 
 import { CoinMarketProvider } from "../context/context";
 

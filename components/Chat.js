@@ -6,7 +6,12 @@ import ChevronUp from "../assets/svg/chevronUp";
 import ChevronDown from "../assets/svg/chevronDown";
 import shiba from "../assets/shiba.png";
 
-const Chat = ({ symbol, name }) => {
+const Chat = ({
+  symbol,
+  name,
+  fullName = "Amir Nikan",
+  username = "mainamirh",
+}) => {
   const [bullish, setBullish] = useState(true);
 
   return (
@@ -20,7 +25,7 @@ const Chat = ({ symbol, name }) => {
           <div style={{ display: "flex", alignItems: "center" }}>
             <Image alt="" src={shiba} width={50} height={50} />
             <div>
-              <p>Amir</p>
+              <p>{fullName}</p>
               <p
                 style={{
                   color: "rgb(133, 140, 162)",
@@ -28,7 +33,7 @@ const Chat = ({ symbol, name }) => {
                   marginTop: "3px",
                 }}
               >
-                &#64;mainamirh
+                &#64;{username}
               </p>
             </div>
           </div>
