@@ -122,21 +122,21 @@ const Header = ({ user }) => {
       </div>
 
       <div className="right-section">
-        {isConnected && currentUser ? (
-          <div onClick={() => signOut()} className="shown-address">
-            <Guest />
-            <div style={{ display: "flex", alignItems: "center" }}>
-              {shortenAddress(currentUser.address)}
-            </div>
-          </div>
-        ) : (
-          <button
-            onClick={() => (modal.current.style.display = "flex")}
-            className="connect-wallet"
-          >
-            Connect Wallet
-          </button>
-        )}
+//         {isConnected && currentUser ? (
+//           <div onClick={() => signOut()} className="shown-address">
+//             <Guest />
+//             <div style={{ display: "flex", alignItems: "center" }}>
+//               {shortenAddress(currentUser.address)}
+//             </div>
+//           </div>
+//         ) : (
+//           <button
+//             onClick={() => (modal.current.style.display = "flex")}
+//             className="connect-wallet"
+//           >
+//             Connect Wallet
+//           </button>
+//         )}
         <div ref={modal} className="connect-modal">
           <div className="modal-content">
             <div className="modal-header">
