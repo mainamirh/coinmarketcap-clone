@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
           <p className="description">
             Get crypto analysis, news and updates right to your inbox! Sign up
-            here so you don't miss a single newsletter.
+            here so you don&#39;t miss a single newsletter.
           </p>
           <button className="subscribe-button">Subscribe now</button>
         </div>
@@ -87,7 +87,7 @@ const Footer = () => {
                     marginInlineStart: "5px",
                   }}
                 >
-                  We're hiring!
+                  We&#39;re hiring!
                 </span>
               </li>
             </ul>
