@@ -18,7 +18,6 @@ const Home = ({ user }) => {
       <main
         style={{
           background: "linear-gradient(to bottom, #212430, #17171a)",
-          paddingTop: "55px",
         }}
         className=""
       >

@@ -53,7 +53,6 @@ const Info = ({ user }) => {
       <div
         style={{
           background: "linear-gradient(to bottom, #212430, #17171a)",
-          paddingTop: "65px",
         }}
       >
         <main className="info-container">
